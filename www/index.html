@@ -13,13 +13,14 @@
         </header>
         
         <main>
-            <div>
-                <a href="/projekt-1">
-                    <img src="/images/cover_next.png">
-                    <h2>«next»</h2>
-                </a>
-                <p>empowering patients</p>
-            </div>
+
+          {{#section projects multiple=true}}
+            <a href="{{_permalink}}">
+              {{image type=image}}
+              <h2>{{title}}</h2>
+            </a>
+          {{/section}}
+
         </main>
 
         <footer>
