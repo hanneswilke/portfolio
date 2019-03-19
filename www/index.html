@@ -1,37 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Hannes Wilke - Portfolio</title>
-        <meta charset="utf-8">
-    </head>
 
-    <body>
-        <header>
-            <a href="/"><h1>Hannes Wilke</h1>
-            <h2>Integrated Designer</h2>
-            </a>
-        </header>
-        
-        <main>
-
-          {{#section projects multiple=true}}
-            <a href="{{_permalink}}">
-              {{image type=image}}
+{{> head}}
+  <main>
+    <ul>
+      {{#section projects multiple=true sortable=true}}
+        <li>
+          <a href="{{_permalink}}">
+            {{cover type=image width=250 height=250 alt="cover image"}}
               <h2>{{title}}</h2>
-            </a>
-          {{/section}}
-
-        </main>
-
-        <footer>
-            <ul>
-                <p><a href="/">home</a></p>
-                <p><a href="/">about</a></p>
-                <p><a href="/">contact</a></p>
-
-                <p><a href="/">dsgvo</a></p>
-                <p><a href="/">impressum</a></p>
-            </ul>
-        </footer>
-    </body>
-</html>
+              <p>{{subtitle}}</p>
+          </a>
+        </li>
+      {{/section}}
+    </ul>
+{{> footer}}

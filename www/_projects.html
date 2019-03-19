@@ -1,0 +1,13 @@
+{{> head}}
+        <a href="/">
+            <p>back</p>
+        </a>
+
+        {{#section projects}}
+            <h1>{{title}}</h1>
+            {{cover type=image width=500 alt="cover image"}}
+
+            {{description type=html}}
+        {{/section}}
+
+{{> footer}}
