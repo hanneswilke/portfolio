@@ -1,10 +1,10 @@
 {{> head}}
+    <main>
+        {{#section about}}
+            <h1>{{Titel}}</h1>
+            {{portrait type=image width=500}}
 
-    {{#section about}}
-        <h1>{{Titel}}</h1>
-        {{portrait type=image width=500}}
-
-        {{text type=html}}
-    {{/section}}
-
+            {{text type=html}}
+        {{/section}}
+    </main>
 {{> footer}}

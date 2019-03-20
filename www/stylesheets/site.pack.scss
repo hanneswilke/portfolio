@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Open+Sans|Raleway');
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|Montserrat|Open+Sans|Raleway');
+@import "header";
 
 *, *:before, *:after {
   margin: 0;
@@ -28,40 +29,8 @@ a:active {
   text-decoration: none;
 }
 
-header h1 {
-  font-weight: bold;
-  text-align: center;
-  margin-top: 3vw;
-  color: black;
-}
-
-header h2 {
-  font-family: 'Cutive Mono';
-  font-weight: normal;
-  font-size: 1.15em;
-  text-align: center;
-  color: black;
-  margin-bottom: 1em;
-}
-
-header ul{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
-.colorfield{
-  background: #f2f2f2;
-  height: 50px;
-  width: 70%;
-  margin: auto;
-  header p{
-    font-weight: bold;
-    text-align: center;
-    font-size: 0.8em;
-    margin-top: 1vw;
-    color: black;
-  }
+a:hover{
+  color: #b4b4b4;
 }
 
 img {
@@ -71,21 +40,23 @@ img {
 
 main {
   width: 100%;
+  padding: 2%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
   .project-item {
-    width: 40vw;
-    margin: 3vw;
+    width: 45vw;
+    margin: 0.6vw;
+
       .colorbox {
         background: #f2f2f2;
         position: relative;
         &:hover{
           img{
-          opacity: .35;
+          opacity: .15;
           }
           div{
             opacity: 1;
@@ -98,30 +69,70 @@ main {
           }
           div{
             position: absolute;
-            top: 35%;
+            top: 40%;
             width: 100%;
             left: 20;
             text-align: center;
             opacity: 0;
-
-            main h2{
-              text-align: center;
-              font-family: 'Raleway';
-              font-weight: 200;
-              font-size: 2vw;
-              color: black;
-            }
-            
-            main p{
-              text-align: center;
-              font-family: 'Raleway';
-              font-weight: 100;
-              font-size: 1vw;
-              color: black;
-            }
           }
       }
   }
+  main h2{
+    text-align: center;
+    font-family: 'Raleway';
+    font-size: 16pt;
+    color: black;
+  }
+  
+  main p{
+    text-align: center;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 11pt;
+    color: black;
+  }
 
+.pagecontainer{
+  max-width: 1024px;
+  margin: auto;
+  padding: 1em 4em;
+}
 
+.titelbild {
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+  }
+}
 
+.projecttitle{
+  text-align: left;
+  font-size: 1.2em;
+  font-weight: normal;
+  letter-spacing: 3px;
+  margin-top: 1em;
+  margin-bottom: 1.2em;
+}
+
+.pagedescription{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: normal;
+  line-height: 1.6;
+
+  max-width: 700px;
+  margin: auto;
+  p{
+    text-align: left;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + main {
+  padding-top: 102px;
+}

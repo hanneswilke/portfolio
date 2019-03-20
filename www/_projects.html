@@ -1,14 +1,21 @@
 {{> head}}
+
     <main>
-        <a href="/">
-            <p>back</p>
-        </a>
+        <div class="pagecontainer">
+            {{#section projects}}
+                <div class="titelbild">
+                    {{cover type=image alt="cover image"}}
+                </div>
+                
+                <div class="projecttitle">
+                    {{title}}
+                </div>
 
-        {{#section projects}}
-            <h1>{{title}}</h1>
-            {{cover type=image width=500 alt="cover image"}}
-
-            {{description type=html}}
-        {{/section}}
+                <div class="pagedescription">
+                    {{description type=html}}
+                </div>
+            {{/section}}
+        </div>  
     </main>
+
 {{> footer}}
