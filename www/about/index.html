@@ -1,10 +1,15 @@
 {{> head}}
     <main>
-        {{#section about}}
-            <h1>{{Titel}}</h1>
-            {{portrait type=image width=500}}
+        <div class="about-pagecontainer">
+            {{#section about}}
+                <div class="portrait-container">
+                    {{portrait type=image alt=portrait-image}}
+                </div>
 
-            {{text type=html}}
-        {{/section}}
+                <div class="about-text">
+                    {{text type=html}}
+                </div>
+            {{/section}}
+    </div>
     </main>
 {{> footer}}

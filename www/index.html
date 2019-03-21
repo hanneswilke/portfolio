@@ -1,20 +1,20 @@
-
 {{> head}}
-  <main>
-    
-      {{#section projects multiple=true}}
-        
-          <a href="{{_permalink}}" class="project-item">
-            <div class="colorbox">
-              {{cover type=image}}
-              <div>
-                  <h2>{{title}}</h2>
-                  <p>{{subtitle}}</p>
-              </div>
-            </div>
-          </a>
 
-        
-      {{/section}}
+  <main>
+      <div class="project-grid">
+        {{#section projects multiple=true}}
+          
+            <a href="{{_permalink}}" class="project-item">
+              <div class="colorbox">
+                {{cover type=image}}
+                <div>
+                    <h2>{{title}}</h2>
+                    <p>{{subtitle}}</p>
+                </div>
+              </div>
+            </a>  
+        {{/section}}
+      </div>
   </main>  
+
 {{> footer}}

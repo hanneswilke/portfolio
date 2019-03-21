@@ -41,13 +41,17 @@ img {
 main {
   width: 100%;
   padding: 2%;
+  z-index: 1;
+}
+
+.project-grid{
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-  .project-item {
+.project-item {
     width: 45vw;
     margin: 0.6vw;
 
@@ -56,7 +60,7 @@ main {
         position: relative;
         &:hover{
           img{
-          opacity: .15;
+           opacity: .15;
           }
           div{
             opacity: 1;
@@ -76,7 +80,8 @@ main {
             opacity: 0;
           }
       }
-  }
+}
+
   main h2{
     text-align: center;
     font-family: 'Raleway';
@@ -108,11 +113,22 @@ main {
 
 .projecttitle{
   text-align: left;
-  font-size: 1.2em;
-  font-weight: normal;
+  font-size: 22pt;
+  font-weight: bold;
   letter-spacing: 3px;
   margin-top: 1em;
-  margin-bottom: 1.2em;
+  margin-bottom: 0.2em;
+}
+
+.project-category{
+  p{
+  text-align: left;
+  font-size: 10pt;
+  font-weight: normal;
+  color: #5e5e5e;
+  //margin-top: 0,3em;
+  }
+  margin-bottom: 2em;
 }
 
 .pagedescription{
@@ -127,12 +143,34 @@ main {
   }
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.about-pagecontainer{
+  //max-width: 1024px;
+  margin: auto;
+  padding: 1em 4em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  
+  .portrait-container{
+    max-width: 25em;
+    margin-bottom: 0.5em;
+    img{
+      width: 100%;
+    }
+  }
+  
+  .about-text{
+    margin-left: 2em;
+    max-width: 25em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: normal;
+    line-height: 1.6;
+    p{
+      text-align: left;
+    }
 }
 
-.sticky + main {
-  padding-top: 102px;
+
 }
